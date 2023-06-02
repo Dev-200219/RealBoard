@@ -151,6 +151,7 @@ body {
     width: 1rem;
     margin: 0.5rem;
     border-radius: 50%;
+    z-index: 1100;
 }
 
 .minimize {
@@ -172,4 +173,9 @@ body {
     border: none;
     outline: none;
     resize: none;
+}
+
+.text-container > img {
+    height: 100%;
+    width: 100%;
 }
