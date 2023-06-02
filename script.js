@@ -29,7 +29,7 @@ toolsToggleBtn.addEventListener('click', (e) => {
 pencilTool.addEventListener('click', (e) => {
     let isVisible = pencilToolsContainer.style.display;
 
-    if(isVisible === 'none') {
+    if(isVisible === 'none' || !isVisible) {
         pencilToolsContainer.style.display = 'block';
         eraserToolsContainer.style.display = 'none';
     }
@@ -41,7 +41,7 @@ pencilTool.addEventListener('click', (e) => {
 eraserTool.addEventListener('click', (e) => {
     let isVisible = eraserToolsContainer.style.display;
 
-    if(isVisible === 'none') {
+    if(isVisible === 'none' || !isVisible) {
         pencilToolsContainer.style.display = 'none';
         eraserToolsContainer.style.display = 'block';
     }
