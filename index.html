@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>RealBoard</title>
+</head>
+<body>
+    <div class="tools-toggle-container">
+        <span class="material-icons open" style="display: none;">menu</span>
+        <span class="material-icons close">close</span>
+    </div>
+    <div class="tools-container">
+        <img class="pencil-tool" src="./images/pencil-svgrepo-com.svg" alt="">
+        <img class="eraser-tool" src="./images/eraser-svgrepo-com.svg" alt="">
+        <img class="undo-tool" src="./images/undo-svgrepo-com.svg" alt="">
+        <img class="redo-tool" src="./images/redo-svgrepo-com.svg" alt="">
+        <img class="sticky-tool" src="./images/sticky-note-svgrepo-com.svg" alt="">
+        <img class="download-tool" src="./images/download-svgrepo-com.svg" alt="">
+        <img class="upload-tool" src="./images/upload-svgrepo-com.svg" alt="">
+    </div>
+    <div class="pencil-tools-container">
+        <div class="pencil-width-container">
+            <input type="range" min="2" max="10" value="4">
+        </div>
+        <div class="pencil-color-container">
+            <div class="black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-container">
+        <div class="eraser-width-container">
+            <input type="range" min="2" max="10" value="4">
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
