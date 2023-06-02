@@ -2,12 +2,19 @@ let toolsToggleBtn = document.querySelector('.tools-toggle-container');
 let toolsContainer = document.querySelector('.tools-container');
 let pencilTool = document.querySelector('.pencil-tool');
 let eraserTool = document.querySelector('.eraser-tool');
+let cursorTool = document.querySelector('.cursor-tool');
 let stickyTool = document.querySelector('.sticky-tool');
+let undoTool = document.querySelector('.undo-tool');
+let redoTool = document.querySelector('.redo-tool');
 let pencilToolsContainer = document.querySelector('.pencil-tools-container');
 let eraserToolsContainer = document.querySelector('.eraser-tool-container');
 let uploadBtn = document.querySelector('.upload-tool');
+let downloadBtn = document.querySelector('.download-tool');
 let closeSymbol = document.querySelector('.close');
 let openSymbol = document.querySelector('.open');
+let isCursorActive = true;
+let isPencilActive = false;
+let isEraserActive = false;
 
 toolsToggleBtn.addEventListener('click', (e) => {
     let isVisible = toolsContainer.style.display;
@@ -22,30 +29,6 @@ toolsToggleBtn.addEventListener('click', (e) => {
         toolsContainer.style.display = 'none';
         closeSymbol.style.display = 'none';
         pencilToolsContainer.style.display = 'none';
-        eraserToolsContainer.style.display = 'none';
-    }
-})
-
-pencilTool.addEventListener('click', (e) => {
-    let isVisible = pencilToolsContainer.style.display;
-
-    if(isVisible === 'none' || !isVisible) {
-        pencilToolsContainer.style.display = 'block';
-        eraserToolsContainer.style.display = 'none';
-    }
-    else {
-        pencilToolsContainer.style.display = 'none';
-    }
-})
-
-eraserTool.addEventListener('click', (e) => {
-    let isVisible = eraserToolsContainer.style.display;
-
-    if(isVisible === 'none' || !isVisible) {
-        pencilToolsContainer.style.display = 'none';
-        eraserToolsContainer.style.display = 'block';
-    }
-    else {
         eraserToolsContainer.style.display = 'none';
     }
 })

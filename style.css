@@ -63,7 +63,7 @@ body {
     width: 8rem;
     position: absolute;
     top: 7rem;
-    left: 25vw;
+    left: calc(25vw + 5rem);
     background-color: #dfe4ea;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -112,7 +112,7 @@ body {
     width: 7.5rem;
     position: absolute;
     top: 7rem;
-    left: calc(25vw + 6.5rem);
+    left: calc(25vw + 11.5rem);
     background-color: #dfe4ea;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -183,4 +183,12 @@ body {
 canvas {
     height: 100%;
     width: 100%;
+}
+
+.eraser-active {
+    cursor: url('./images/eraser.cur'), auto;
+}
+
+.pencil-active {
+    cursor: url('./images/Large\ Pencil\ Dark\ Blue.cur'), auto;
 }
