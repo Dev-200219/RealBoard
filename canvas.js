@@ -2,6 +2,7 @@ let canvas = document.querySelector('canvas');
 let pencilColors = document.querySelectorAll('.pencil-color');
 let pencilWidth = document.querySelector('.pencil-width-container input');
 let eraserWidth = document.querySelector('.eraser-width-container input');
+let pencilColor = 'black';
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
  
@@ -38,13 +39,13 @@ canvas.addEventListener('mouseup', (e) => {
     mouseDown = false;
     ctx.closePath();
     stateStack[++stateIdx] = canvas.toDataURL();
-    console.log(stateStack);
 })
 
 //for changing color
-pencilColors.forEach((pencilColor) => {
-        pencilColor.addEventListener('click', (e) => {
-        ctx.strokeStyle = pencilColor.classList[0];
+pencilColors.forEach((pencilColorElement) => {
+    pencilColorElement.addEventListener('click', (e) => {
+        pencilColor = pencilColorElement.classList[0];
+        ctx.strokeStyle = pencilColorElement.classList[0];
     })
 })
 
@@ -98,7 +99,7 @@ pencilTool.addEventListener('click', (e) => {
     canvas.classList.remove('eraser-active')
 
     ctx.lineWidth = pencilWidth.value;
-    ctx.strokeStyle = 'black';
+    ctx.strokeStyle = pencilColor;
 })
 
 cursorTool.addEventListener('click', (e) => {
